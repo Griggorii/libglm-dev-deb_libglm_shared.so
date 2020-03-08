@@ -10,7 +10,7 @@ $$ sudo apt install cmake-qt-gui -y
 
 $$ cmake-gui
 
-Жмем generate это создаст новый makefile фаил который вы удалили мо этого
+Жмем generate это создаст новый makefile фаил который вы удалили до этого
 
 $$ make -j16
 
