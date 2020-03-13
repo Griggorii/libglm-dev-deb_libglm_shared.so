@@ -1,6 +1,14 @@
 # libglm-dev-deb_libglm_shared.so
 libglm-dev , deb , mat2x2 , opencv , vec1 , vec2, vec3 , vec4 , vec4_avx , vec4_avx2 , vec4_sse2 вообщем больше чем в стандартном пакете только я не понял почему они мой пакет в свою фирму не берут , а поставляют урезанную версию которая типа новее. Фактически графические движки из за отсутствия vec1 , vec2, vec3 , vec4 приведет просто не запустятся из за их отсутствия. И потом вот такие вот вопросы https://forums.developer.apple.com/thread/127465
 
+$$ make -j16
+
+$$ sudo make install
+
+________________________________________________________________________
+
+Если не получиться то ниже
+
 $$ sudo apt install cmake-qt-gui -y
 
 Изменить все пути на свои в этом поможет редактирование фаила CMakeCache.txt внутри 
@@ -11,6 +19,22 @@ $$ sudo apt install cmake-qt-gui -y
 $$ cmake-gui
 
 Жмем generate это создаст новый makefile фаил который вы удалили до этого
+
+______________________________________________________________________________________________
+
+Отредактируйте glm.pc
+
+prefix=/usr
+libdir=${prefix}/include/glm
+includedir=${prefix}/include
+
+Name: GLM
+Description: OpenGL Mathematics
+Version: 0.9.9
+Libs: -L${libdir} -lglmshared_shared
+Cflags: -I${includedir}
+
+_______________________________________________________________________________________________
 
 $$ make -j16
 
