@@ -1,5 +1,5 @@
 # libglm-dev-deb_libglm_shared.so
-libglm-dev , deb , mat2x2 , opencv
+libglm-dev , deb , mat2x2 , opencv , vec1 , vec2,vec3 , vec4 , vec4_avx , vec4_avx2 , vec4_sse2 вообщем больше чем в стандартном пакете только я не понял почему они мой пакет в свою фирму не берут , а поставляют урезанную версию которая типа новее.
 
 $$ sudo apt install cmake-qt-gui -y
 
